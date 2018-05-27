@@ -28,3 +28,8 @@ I started working on nextflow with the help of [docs](https://www.nextflow.io/do
 
 Nextflow and bionode-watermill has lot's of similarity like code redusability and automated input/output handling.
 While doing some of the examples in nextflow the use of channels makes the process easy.
+
+* In nextflow we can use input of one process with channels so that it can be reused again like this
+   ```
+( samples1, samples2, ... , samplesN ) = samples.into(N)
+```
