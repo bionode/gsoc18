@@ -30,6 +30,6 @@ Nextflow and bionode-watermill has lot's of similarity like code redusability an
 While doing some of the examples in nextflow the use of channels makes the process easy.
 
 * In nextflow we can use input of one process with channels so that it can be reused again like this
-   ```
-( samples1, samples2, ... , samplesN ) = samples.into(N)
-```
+   ``` ( samples1, samples2, ... , samplesN ) = samples.into(N)```
+
+
