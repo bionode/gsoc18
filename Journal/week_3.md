@@ -39,5 +39,13 @@ run by a `task`. All inputs and outputs are saved within data folder (generated 
 current working directory. It is difficult to design which **outputs** go to what **inputs** in watermill because it just 
 goes up `DAG(Directed Acyclic Graph)` until found an output matching desired input pattern, so it can be ambiguous.
 
+* In nextflow `input` block defines which `channels` the **process** is expecting to receive inputs data from and output 
+  allows to define the `channels` used by the **process** to send out the results produced. With the help of `channels` 
+  `output` can be reused in different **processes** and this s one of the major advantage to use [nextflow](https://www.nextflow.io/).
+  
+ * Bionode-watermill and nextflow can use various scripting language just you have to do
+     ```!#/usr/bin/env python```
+  
+
 
 
