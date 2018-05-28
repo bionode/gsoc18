@@ -39,6 +39,26 @@ run by a `task`. All inputs and outputs are saved within data folder (generated 
 current working directory. It is difficult to design which **outputs** go to what **inputs** in watermill because it just 
 goes up `DAG(Directed Acyclic Graph)` until found an output matching desired input pattern, so it can be ambiguous.
 
+  > ```cypher
+CREATE
+(a:Task { label: 'A'}), (b:Task { label: 'B'}), (c:Task { label: 'C'}), (d:Task { label: 'D'}),
+(a1:File { label: 'a1'}), (a2:File { label: 'a2'}), (a3:File { label: 'a3'}), 
+(b1:File { label: 'b1'}), (b2:File { label: 'b2'}),
+
+(a)-[:Output]->(a1),
+(a)-[:Output]->(a2),
+(a)-[:Output]->(a3),
+
+(a1)-[:Input]->(b),
+(a2)-[:Input]->(c),
+(a3)-[:Input]->(c),
+
+(b)-[:Output]->(b1),
+(b)-[:Output]->(b2),
+
+(b1)-[:Input]->(d)
+```
+
 * In nextflow `input` block defines which `channels` the **process** is expecting to receive inputs data from and output 
   allows to define the `channels` used by the **process** to send out the results produced. With the help of `channels` 
   `output` can be reused in different **processes** and this s one of the major advantage to use [nextflow](https://www.nextflow.io/).
