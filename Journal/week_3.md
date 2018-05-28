@@ -2,7 +2,7 @@
 
 - [Summary](#summary)
 - [Getting familar with nextflow](#getting-familar-with-nextflow)
-- [Comparison between nextflow and bionode-watermill](#comparision-between-nextflow-and-bionode-watermill)
+- [Comparison between nextflow and bionode-watermill](#comparision-between-nextflow-and-bionode--watermill)
 
 
 ## Summary
