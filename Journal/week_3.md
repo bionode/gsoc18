@@ -31,7 +31,7 @@ While doing some of the examples in nextflow the use of channels makes the proce
 
 * In nextflow we can use input of one process with channels so that it can be reused again like this
    
-   ``` ( samples1, samples2, ... , samplesN ) = samples.into(N)``` 
+   ` ( samples1, samples2, ... , samplesN ) = samples.into(N)` 
    
 * In watermill `Input/Output`can be a **string glob pattern**, or a plain object of them. The glob will be **resolved to an
 absolute path** when it is passed to the `operationCreator`. Bionode-watermill manages input and output files and folders
@@ -58,15 +58,17 @@ goes up `DAG(Directed Acyclic Graph)` until found an output matching desired inp
 
    (b1)-[:Input]->(d) 
  ```
+ 
  ![alt text](https://github.com/bionode/gsoc18/blob/master/Images/Screenshot-from-2018-05-26-13-25-52.png "DAG")
+
 
 * In nextflow `input` block defines which `channels` the **process** is expecting to receive inputs data from and output 
   allows to define the `channels` used by the **process** to send out the results produced. With the help of `channels` 
   `output` can be reused in different **processes** and this s one of the major advantage to use [nextflow](https://www.nextflow.io/).
   
  * Bionode-watermill and nextflow can use various scripting language just you have to do
-     ```!#/usr/bin/env python```
-  
-
-
-
+ 
+     ``` python
+     !#/usr/bin/env python
+     ```
+ 
