@@ -57,9 +57,8 @@ goes up `DAG(Directed Acyclic Graph)` until found an output matching desired inp
    (b)-[:Output]->(b2),
 
    (b1)-[:Input]->(d) 
- 
  ```
- 
+ ![alt text](https://github.com/bionode/gsoc18/blob/master/Images/Screenshot-from-2018-05-26-13-25-52.png "DAG")
 
 * In nextflow `input` block defines which `channels` the **process** is expecting to receive inputs data from and output 
   allows to define the `channels` used by the **process** to send out the results produced. With the help of `channels` 
