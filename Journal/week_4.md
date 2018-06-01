@@ -52,5 +52,13 @@ stdout: $(inputs.out_fastq_prefix).fastq
 * A yml file which have the path to the input or it can also have commands etc. So, I've given the path of the sra file
 for the `fastq-dump` process to occur.
 
+```yml
+sraFile:
+  class: File
+  path: data/ERR045788.sra
+
+out_fastq_prefix: _OUT_FASTQ_PREFIX_
+ ```
+ 
 
 
