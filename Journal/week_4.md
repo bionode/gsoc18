@@ -59,5 +59,29 @@ sraFile:
 out_fastq_prefix: _OUT_FASTQ_PREFIX_
  ```
  
+Then second task is gunzip it
+
+* gnuzip.cwl file :-  Which will help to uncompress the gz.
+
+```cwl
+cwlVersion: v1.0
+
+class: CommandLineTool
+
+baseCommand: [gunzip, -c]
+
+inputs:
+  gzipfile:
+    type: File
+    inputBinding:
+      position: 1
+
+outputs:
+  unzipped_vcf:
+    type: stdout
+
+stdout: unzipped.vcf
+```
+ 
 
 
