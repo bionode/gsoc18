@@ -17,7 +17,7 @@ I started working with CWL with the help of [docs](http://www.commonwl.org/user_
 which is there in the docs guide and some from [CWl-example-repo](https://github.com/common-workflow-language/workflows).
 Then I started working on simple example like `fastq-dump` tool which is the intial step of the [two-mappers-example](https://github.com/bionode/bionode-watermill/blob/46499966a41c5977941ba4b617298aa64192b2c3/examples/pipelines/two-mappers/pipeline.js#L58).
 
-### For running CWL tool for fastq-dumb we have to make two files
+#### For running CWL tool for fastq-dumb we have to make two files
 
 * fastq.cwl :- This file contains the workflow. This file will be provided with `input` and `output` and some base commands
 which will help to execute the process. The `docker` is required in most of the process where this tool is installed
@@ -49,9 +49,6 @@ outputs:
 stdout: $(inputs.out_fastq_prefix).fastq
 ```
 
-
-### For running cwl tool for gunzip 
-
 * A yml file which have the path to the input or it can also have commands etc. So, I've given the path of the sra file
 for the `fastq-dump` process to occur.
 
@@ -62,6 +59,8 @@ sraFile:
 
 out_fastq_prefix: _OUT_FASTQ_PREFIX_
  ```
+ 
+ #### For running cwl tool for gunzip 
  
 Then second task is gunzip it
 
@@ -87,5 +86,10 @@ outputs:
 stdout: unzipped.vcf
 ```
  
+* A `input.yml` file for providing the path
 
+```yml
+infile:
+  class: File
+  path: data/input.vcf.gz
 
