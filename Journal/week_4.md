@@ -92,4 +92,6 @@ stdout: unzipped.vcf
 infile:
   class: File
   path: data/input.vcf.gz
-
+  ```
+  
+  
