@@ -21,7 +21,8 @@
  explained [here](https://www.commonwl.org/v1.0/Workflow.html#Workflow).
  
  I also made a [Pull Request-93](https://github.com/bionode/bionode-watermill/pull/93) in which I've included all the changes 
- which is done to catch the `uncaught-errors` which occurs while running a pipeline with child-process. 
+ which is done to catch the `uncaught-errors` which occurs while running a pipeline with child-process and it also helps to 
+ know the Workflow status of the process.
  
 ### Creating a WorkFlow State
 
