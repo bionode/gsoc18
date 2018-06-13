@@ -3,7 +3,7 @@
 
 - [Summary](#summary)
 - [Progress](#progress)
-	-[Creating a WorkFlow State](#creating-a-workflow-state)
+	- [Creating a WorkFlow State](#creating-a-workflow-state)
 
 
 
