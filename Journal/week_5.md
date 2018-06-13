@@ -26,5 +26,50 @@
  
 ### Creating a WorkFlow State
 
-In this i've created a `workfloState` file which will tell the state of the process whether is `PermanentFailed`,
-`TemporaryFailed` or `Success`. Here I've used Redux because we can debug with the redux very easily 
+In this i've created a `workflowState` file which will tell the state of the process whether is `PermanentFailed`,
+`TemporaryFailed` or `Success`. Here I've used Redux because we can debug with the redux very easily and code can be written
+easily. 
+
+```javascript
+
+const PERMANENT_FAILURE = 'PERMANENT_FAILURE'
+const TEMPORARY_FAILURE = 'TEMPORARY_FAILURE'
+const SUCCESS = 'SUCCESS'
+
+const defaultState = 'starting' // find what conforms to CWL spec..
+
+// Reducer
+const reducer = (state = defaultState, action) => {
+  switch (action.type) {
+    case PERMANENT_FAILURE:
+      return 'permanentFailure'
+    case TEMPORARY_FAILURE:
+      return 'temporaryFailure'
+    case SUCCESS:
+      return 'success'	 
+   default:
+      return state
+  }
+}
+
+// Action creators
+reducer.setWorkflowStatusPermanentFailure = () => ({
+  type: PERMANENT_FAILURE
+})
+
+reducer.setWorkflowStatusTemporaryFailure = () => ({
+	type: TEMPORARY_FAILURE
+})
+
+reducer.setWorkflowStatusSuccess = () => ({
+	type: SUCCESS
+})
+// Also make action types importable elsewhere
+reducer.PERMANENT_FAILURE = 'PERMANENT_FAILURE'
+
+reducer.TEMPORARY_FAILURE = 'TEMPORARY_FAILURE'
+
+reducer.SUCCESS = 'SUCCESS'
+
+```
+
