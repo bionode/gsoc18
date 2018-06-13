@@ -20,14 +20,12 @@
  and rest of the task is also existed so we have taken the example of `CWL` for workflow failure and success. WHich is
  explained [here](https://www.commonwl.org/v1.0/Workflow.html#Workflow).
  
- I also made a [Pull Request-92](https://github.com/bionode/bionode-watermill/pull/91) in which I've included all the changes 
- which is done to catch the `uncaught-errors` which occurs while running a pipeline with child-process. Various changes are
- suggested by the mentor so I've closed this Pull Request and made a new pull request [#93](https://github.com/bionode/bionode-watermill/pull/93)
- which contains all the chnages and currently working on this Pull request.
+ I also made a [Pull Request-93](https://github.com/bionode/bionode-watermill/pull/93) in which I've included all the changes 
+ which is done to catch the `uncaught-errors` which occurs while running a pipeline with child-process. 
  
 ### Creating a WorkFlow State
 
-In this i've created a `workflowState` file which will tell the state of the process whether is `PermanentFailed`,
+In this i've created a `workflowState` file which will tell the state of the wotkflow whether it is `PermanentFailed`,
 `TemporaryFailed` or `Success`. Here I've used Redux because we can debug with the redux very easily and code can be written
 easily. 
 
@@ -66,11 +64,11 @@ reducer.setWorkflowStatusSuccess = () => ({
 	type: SUCCESS
 })
 // Also make action types importable elsewhere
-reducer.PERMANENT_FAILURE = 'PERMANENT_FAILURE'
+reducer.PERMANENT_FAILURE = PERMANENT_FAILURE
 
-reducer.TEMPORARY_FAILURE = 'TEMPORARY_FAILURE'
+reducer.TEMPORARY_FAILURE = TEMPORARY_FAILURE
 
-reducer.SUCCESS = 'SUCCESS'
+reducer.SUCCESS = SUCCESS
 
 ```
 This will help to test the workflow status of the process. 
