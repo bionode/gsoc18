@@ -3,6 +3,7 @@
 
 - [Summary](#summary)
 - [Progress](#progress)
+	-[Creating a WorkFlow State](#creating-a-workflow-state)
 
 
 
@@ -72,4 +73,4 @@ reducer.TEMPORARY_FAILURE = 'TEMPORARY_FAILURE'
 reducer.SUCCESS = 'SUCCESS'
 
 ```
-
+This will help to test the workflow status of the process. 
