@@ -73,3 +73,16 @@ reducer.SUCCESS = SUCCESS
 
 ```
 This will help to test the workflow status of the process. 
+
+While testing the pipeline for Workflow status. I encountered one more problem while runing the testpipeline which is 
+node is not able to find the file which is used to test the `child-process`. So this problem is rectified by two method :
+
+* Hardcode relative to the current directory of node process running pipeline
+
+```javascript
+const anotherTask = task({
+  name: 'Run a JS file',
+  output: 'ran.txt'
+}, () => `node /home/evoxtorm/Desktop/Bionode-watermill/bionode-watermill/test/workflow-status/wait-error.js && touch ran.txt`)
+```
+* Set the working directory of the child process 
