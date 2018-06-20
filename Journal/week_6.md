@@ -15,3 +15,14 @@ error `Cannot find the module`. For rectifying this error I've worked on underst
 
 ## Progress
 
+This week I've basically working on `Pull request` [#93](https://github.com/bionode/bionode-watermill/pull/93) so basically 
+for understanding the error I learned `redux-saga` which is a library of `redux` and used in `Bionode-Watermill`. For better
+understanding of the `child-process` in `bionode-Watermill` I started to understand the code of `shell.js`. In starting 
+it seems to tough but with the help of `debugger` which is provided by node itself I started understanding the code
+very well. For this task I've taken around **6 to 8 hours** but finally I was able to understand the code.
+
+The command can be written as :-
+
+```js
+REDUX_LOGGER=1 node --inspect pipeline.js
+```
