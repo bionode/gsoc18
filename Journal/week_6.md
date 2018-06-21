@@ -4,6 +4,7 @@
 - [Summary](#summary)
 - [Progress](#progress)
      - [Understanding lifecycle.js](#understanding-lifecycle.js-)
+     - [Doubts](#doubts)
 
 
 ## Summary
@@ -44,3 +45,35 @@ dispatching a action. So, this can be explained with the help of simple flow dia
 This flow diagram basically expalins everything how it is able to do the various functions but one more important things 
 because if it functions like that it will run `infinite times` so to prevent this situation not to occur so, we set the 
 setting of `resumable = false` lets us avoid an infinite loop when output cannot be resolved.
+
+
+### Doubts
+
+While working on `Pull request` [#93](https://github.com/bionode/bionode-watermill/pull/93). I was getting the error which
+is because it is not able find the module. So, what I observe and what I have solution for it:
+
+* Observation
+
+While running the pipelines first it creates the directory :
+
+```js
+Made dir: /home/evoxtorm/Desktop/Bionode-watermill/bionode-watermill/test/workflow-status/data/bc4b43d
+```
+and while on execting the pipeline the node is not able to fiind the module
+
+```js
+Cannot find module '/home/evoxtorm/Desktop/Bionode-watermill/bionode-watermill/test/workflow-status/data/bc4b43d/test/workflow-status/wait-error.js'
+```
+The path is different so that's why it is not able to find this
+
+* Solution 
+
+So, my proposed solution is that if we will remove these `data` and `uid` from the path . So , this way the problem can be solved.
+
+
+
+
+
+
+
+
