@@ -70,7 +70,21 @@ The path is different so that's why it is not able to find this
 
 So, my proposed solution is that if we will remove these `data` and `uid` from the path . So , this way the problem can be solved.
 
-
+ *  **What I did** : This week basically I've worked with `redux`, `redux-saga` and understanding the codebase which helped
+ me in analzing the problem and how I can rectify the problem and it also helps in identifying which part of error comes
+ from wchich file or which block of code is responsinble for it. Then side by side I tried to `debug` the problems
+ due to whch I was getting errors.
+ 
+ 
+ *  **Problems Encountered** : While understanding of the codebase most of the parts is well documented wityh the hekp of
+ comments but some part is little difficult and hard to read and I've discussed lot's of things with mentor which
+ can be implemented in our code so that it work's more efficently and it will attract more developers but the problem
+ with that is how to start, from where I've to  start because implementing the code for a library is quite confusing.
+ 
+ 
+ *  **What I tried** : To encouter above problems I've serached alot like slicing the code and learn in small parts and 
+ googling the things, reading blogs, watchinng videos and asked question from mentor. I try to write the code as well but 
+ implementig the code is bit confusing.
 
 
 
