@@ -31,7 +31,7 @@ REDUX_LOGGER=1 node --inspect pipeline.js
 
 ### Understanding lifecycle.js
 
-The `lifecycle.js` consists of main functions, these functions helps to regulate the lifecycle of the pipeline. So, I started 
+The `lifecycle.js` consists of main functions, these functions helps to regulate the lifecycle of the task. So, I started 
 understanding the codebase so that I know how every task happened when we run a pipeline. From creating a action to 
 dispatching a action. So, this can be explained with the help of simple flow diagram which is explained as:
 
