@@ -1,5 +1,6 @@
 - [Summary](#summary)
 - [Intial Steps](#intial-steps)
+- [Getting started with Docker](#getting-started-with-docker)
 
 
 
@@ -17,3 +18,7 @@ help the developers who want to get started with development of this project or 
 The first step is to fork the `Bionode-Watermill` [repo](https://github.com/bionode/bionode-watermill), the extra information 
 about it's requirement and other things are explained in main repo page. The important information what is does and how you
 can use `Bionode-Watermill` is there in [guide](https://bionode.gitbooks.io/bionode-watermill/content/). Here you can basic examples and how you can make your `example-pipelines`. This will give atleast basic knowledge of `Bionode-Watermill`.
+
+
+# Getting started with Docker
+ 
