@@ -110,3 +110,5 @@ RUN npm install bionode-ncbi -g
 # START zsh before using iteractive mode
 RUN zsh
 ```
+
+The above dockerfile is for `two-mappers pipeline` which is present in `Bionode-watermill` examples.
