@@ -1,6 +1,7 @@
 - [Summary](#summary)
 - [Intial Steps](#intial-steps)
 - [Getting started with Docker](#getting-started-with-docker)
+- [Getting started with Redux](#getting-started-with-redux)
 
 
 
@@ -112,3 +113,9 @@ RUN zsh
 ```
 
 The above dockerfile is for `two-mappers pipeline` which is present in `Bionode-watermill` examples.
+
+
+# Getting started with Redux
+
+We have used `redux` in `Bionode-Watermill` because it help's to debug various process and it also helps to make various
+process easy. If you are new to redux then you may find `redux` little challenging while using with `node`.
