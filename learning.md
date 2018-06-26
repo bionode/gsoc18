@@ -118,4 +118,11 @@ The above dockerfile is for `two-mappers pipeline` which is present in `Bionode-
 # Getting started with Redux
 
 We have used `redux` in `Bionode-Watermill` because it help's to debug various process and it also helps to make various
-process easy. If you are new to redux then you may find `redux` little challenging while using with `node`.
+process easy. If you are new to redux then you may find `redux` little challenging while using with `node`. For learning
+`redux` you can refer to offical [docs](https://redux.js.org/basics) and other then from that you can also do a course
+on redux by [egghead](https://egghead.io/courses/getting-started-with-redux), this course will help you clearing your doubts
+and helping you to understand our codebase.
+
+You can try a simple todo app with the help of redux. If you know react then it will plus point for you because mostly the 
+redux tutorials are explain with react. So, you can learn more easily but if you don't know react then it is ok
+to try a example with plain HTML.
