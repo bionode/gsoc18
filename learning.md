@@ -2,11 +2,11 @@
 - [Intial Steps](#intial-steps)
 - [Getting started with Docker](#getting-started-with-docker)
 - [Getting started with Redux](#getting-started-with-redux)
+            - [Redux-Saga](#redux-saga)
 
 
 
-
-# Summary
+## Summary
 
 This guide contains all the things which is required to start for contribution in this project. I've started most of things 
 which I learn is from basic so, maybe you will also face the same problems like I've encountered while learning and for
@@ -14,14 +14,14 @@ contribution. I try to explain most of the things for a beginner which has basic
 help the developers who want to get started with development of this project or want to start contribute to this project.
 
 
-# Intial Steps
+## Intial Steps
 
 The first step is to fork the `Bionode-Watermill` [repo](https://github.com/bionode/bionode-watermill), the extra information 
 about it's requirement and other things are explained in main repo page. The important information what is does and how you
 can use `Bionode-Watermill` is there in [guide](https://bionode.gitbooks.io/bionode-watermill/content/). Here you can basic examples and how you can make your `example-pipelines`. This will give atleast basic knowledge of `Bionode-Watermill`.
 
 
-# Getting started with Docker
+## Getting started with Docker
  
  
 For running the big pipelines we have used docker so that all the things can present in docker conatiner. Docker is a 
@@ -115,7 +115,7 @@ RUN zsh
 The above dockerfile is for `two-mappers pipeline` which is present in `Bionode-watermill` examples.
 
 
-# Getting started with Redux
+## Getting started with Redux
 
 We have used `redux` in `Bionode-Watermill` because it help's to debug various process and it also helps to make various
 process easy. If you are new to redux then you may find `redux` little challenging while using with `node`. For learning
@@ -129,3 +129,12 @@ to try a example with plain HTML.
 
 You can learn a little basic of it and it will help you in understanding the codebase. In `bionode-watermill` we have reducer functions which helps to do some tasks. You can find all these reducers [here](https://github.com/evoxtorm/bionode-watermill/tree/master/lib/reducers).
 
+
+### Redux-Saga
+
+It is a library of redux which helps to make the complex action more easier and help to do various tasks in a easy way. This
+library use **Generators**. You can learn about `generator` [here](https://www.youtube.com/watch?v=ategZqxHkz4&t=1274s)
+. This videos is good and I learned the basics and how we can use in our project. For `redux-saga` you can refer to it's
+offical [docs](https://redux-saga.js.org/docs/introduction/BeginnerTutorial.html). If you find difficulty reading docs then
+you can get lot's of resolurces online and in youtube too. One video which helped me in better understanding is [here](https://www.youtube.com/watch?v=o3A9EvMspig).
+For understanding where it is used in `bionode-watermill` you can find it in [lifecycle.js](https://github.com/evoxtorm/bionode-watermill/blob/master/lib/sagas/lifecycle.js#L116).
