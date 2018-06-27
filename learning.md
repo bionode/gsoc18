@@ -2,7 +2,7 @@
 - [Intial Steps](#intial-steps)
 - [Getting started with Docker](#getting-started-with-docker)
 - [Getting started with Redux](#getting-started-with-redux)
-            - [Redux-Saga](#redux-saga)
+           - [Redux Saga](#redux-saga)
 
 
 
