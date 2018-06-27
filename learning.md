@@ -126,3 +126,6 @@ and helping you to understand our codebase.
 You can try a simple todo app with the help of redux. If you know react then it will plus point for you because mostly the 
 redux tutorials are explain with react. So, you can learn more easily but if you don't know react then it is ok
 to try a example with plain HTML.
+
+You can learn a little basic of it and it will help you in understanding the codebase. In `bionode-watermill` we have reducer functions which helps to do some tasks. You can find all these reducers [here](https://github.com/evoxtorm/bionode-watermill/tree/master/lib/reducers).
+
