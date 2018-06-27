@@ -1,7 +1,9 @@
 - [Summary](#summary)
 - [Intial Steps](#intial-steps)
 - [Getting started with Docker](#getting-started-with-docker)
-- [Getting started with Redux](#getting-started-with-redux)                                                                                            - [Redux Saga](#redux-saga)
+- [Getting started with Redux](#getting-started-with-redux)   
+        - [Redux Saga](#redux-saga)
+- [Getting started with bionode-watermill code](#getting-started-with-bionode-watermill-code)
 
 
 
@@ -137,3 +139,24 @@ library use **Generators**. You can learn about `generator` [here](https://www.y
 offical [docs](https://redux-saga.js.org/docs/introduction/BeginnerTutorial.html). If you find difficulty reading docs then
 you can get lot's of resolurces online and in youtube too. One video which helped me in better understanding is [here](https://www.youtube.com/watch?v=o3A9EvMspig).
 For understanding where it is used in `bionode-watermill` you can find it in [lifecycle.js](https://github.com/evoxtorm/bionode-watermill/blob/master/lib/sagas/lifecycle.js#L116).
+
+
+## Getting started with bionode-watermill code
+
+Basically when I first sees the code I was unable to understand it on my own but with the guidance of my mentors I was able
+to understand the code and how it is actually working. The functional code is present in `lib` folder and in `lib` there are
+many sub-folders so it is difficult to find where to start. So, basically most of the important code is present in [lifecycle.js](https://github.com/evoxtorm/bionode-watermill/blob/master/lib/sagas/lifecycle.js) 
+where it explain about the lifecycle of **Bionode-Watermill**. So, if you trying to understand `lifecycle` it will make
+easy to understand how it is executing the tasks. `Lifecycle.js` is very well commented and reading throughly helps
+you understand more easily. A little idea about lifecycle can be explained from this diagram:-
+
+```js
+                                      (if resumable) ↘︎
+  resolveInput -> (!resumable) ->      operationSaga -> resolveOutput -> validateOutput
+           ↖︎ (if resumable and output cannot be resolved)    ⏎
+           
+```
+I've tried to explain this [here](https://github.com/bionode/gsoc18/blob/master/Journal/week_6.md#understanding-lifecyclejs)
+hope it can to better understanding.
+
+Apart from this there are various important things are present but it cannot solely understand here. So, just try to read the code and if anything is not clear you can ask any question regarding the code in [gitter](https://gitter.im/bionode/bionode).
