@@ -3,6 +3,7 @@
 
 - [Summary](#summary)
 - [Progress](#progress)
+    -[Input-Staging](#input-staging)
 
 
 
@@ -62,3 +63,28 @@ outputs:
 
 Here in this `cwl` code I've provided `InitialWorkDirRequirement` to stage input files into the output directory. It also 
 takes another `yml` filw which basically tells the path of the file.
+
+### Input-Staging
+
+The basics of input staging is already covered above. So, To apply this on `bionode-watermill`. I've tried to make a 
+prototype basically which does something same like this.Basically I've divided this process in four steps. I will try to 
+understand the four steps one by one.
+
+* Reading the `input.json` :- The first step is to read the `json` file which contains the path of the input file and 
+with the help of json file we are able to make the `working directory` so that input can be taken easily. Here's the code sinppet for it.
+
+```js
+// Input path of JSON file
+const input = path.resolve(__dirname, 'input.json')
+
+// Reading the json file
+readFile(input, {encoding: 'utf8'})
+	.then(contents => {
+		const data = JSON.parse(contents)
+		console.log(data)
+	})
+	.catch(error => {
+		throw error
+	})
+```
+
