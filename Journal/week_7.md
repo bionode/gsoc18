@@ -4,6 +4,7 @@
 - [Summary](#summary)
 - [Progress](#progress)
     - [Input-Staging](#input-staging)
+    - [Learning](#learning)
 
 
 
@@ -121,3 +122,10 @@ function copyFile(source, target) {
   })
 }
 ```
+
+### Learning
+
+This guides basically includes how a new developer can get started with `bionode-watermill` all the steps which is requires
+to get started or want to work or help in contribution but doesn't know how to get started or basically has no idea.
+So, for any beginners who want to start so it covers all the things which is needed for it. I'm still writing this but I've 
+almost covered tye important part. You can read it [here](https://github.com/bionode/gsoc18/blob/master/learning.md).
