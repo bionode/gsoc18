@@ -3,7 +3,7 @@
 
 - [Summary](#summary)
 - [Progress](#progress)
-    -[Input-Staging](#input-staging)
+    - [Input-Staging](#input-staging)
 
 
 
@@ -88,3 +88,36 @@ readFile(input, {encoding: 'utf8'})
 	})
 ```
 
+* Resolving the input file:- This part is still in devlopment phase as I've various doubts regarding this steps. So, I've 
+written about this on doubts section.
+
+* Creating a working directory :- In this step I will create a working directory for the input path provide in the `json file`.
+Here's the code snippet of it
+
+```js
+mkdirp(path, function (err) {
+    if (err) console.error(err)
+     else console.log('pow!')
+ })
+ ```
+This will basically create a working directory where the input's can be kept.
+
+
+*  Copying the `json file` in the directory:- This step basically includes the copying of input.json to the working directory.
+
+```js
+function copyFile(source, target) {
+  let readir = fs.createReadStream(source)
+  let wrdir = fs.createWriteStream(target)
+  return new Promise(function(resolve, reject) {
+    readir.on('error', reject)
+    wrdir.on('error', reject)
+    wrdir.on('finish', resolve)
+    readir.pipe(wrdir)
+  }).catch(function(error) {
+    readir.destroy()
+    wrdir.end()
+    throw error
+  })
+}
+```
