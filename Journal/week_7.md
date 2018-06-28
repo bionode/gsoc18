@@ -25,4 +25,40 @@ Key points for Staging Input Files are :-
 * Input files are normally kept in a read-only directory
 * Use `InitialWorkDirRequirement` to stage input files in the working directory
 
+For better undertsanding of it I also tried a example of using input-staging with the help of cwl to run a `node file`.
+Here's the code for it.
 
+```cwl
+#!/usr/bin/env cwl-runner
+
+cwlVersion: v1.0
+class: CommandLineTool
+hints:
+  DockerRequirement:
+    dockerPull: node:latest
+
+
+baseCommand: node
+
+requirements:
+  InitialWorkDirRequirement:
+    listing:
+      - $(inputs.src)
+
+inputs:
+  src:
+    type: File
+    inputBinding:
+      position: 1
+      valueFrom: $(self.basename)
+
+outputs:
+  classfile:
+    type: File
+    outputBinding:
+      glob: "*.js"
+
+```
+
+Here in this `cwl` code I've provided `InitialWorkDirRequirement` to stage input files into the output directory. It also 
+takes another `yml` filw which basically tells the path of the file.
