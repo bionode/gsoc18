@@ -5,6 +5,7 @@
 - [Progress](#progress)
     - [Input-Staging](#input-staging)
     - [Learning](#learning)
+    - [Doubts](#doubts)
 
 
 
@@ -129,3 +130,10 @@ This guides basically includes how a new developer can get started with `bionode
 to get started or want to work or help in contribution but doesn't know how to get started or basically has no idea.
 So, for any beginners who want to start so it covers all the things which is needed for it. I'm still writing this but I've 
 almost covered tye important part. You can read it [here](https://github.com/bionode/gsoc18/blob/master/learning.md).
+
+### Doubts
+
+While doing the following tasks I've encounterd various doubts. Like I'm very confused how to resolve the inputs of `input-staging`
+which is new and different from the normal lifecycle inputs to be resolved.
+
+* The other doubt I encountered is that how to chain all the steps together. I've tried it but it show's the error .
