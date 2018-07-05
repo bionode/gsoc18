@@ -4,6 +4,7 @@
 - [Getting started with Redux](#getting-started-with-redux)   
         - [Redux Saga](#redux-saga)
 - [Getting started with bionode-watermill code](#getting-started-with-bionode-watermill-code)
+- [Comparision with other softwares](#comparision-with-other-softwares)
 
 
 
@@ -160,3 +161,12 @@ I've tried to explain this [here](https://github.com/bionode/gsoc18/blob/master/
 hope it can to better understanding.
 
 Apart from this there are various important things are present but it cannot solely understand here. So, just try to read the code and if anything is not clear you can ask any question regarding the code in [gitter](https://gitter.im/bionode/bionode).
+
+
+## Comparision with other softwares
+
+I have compared the efficency of bionode-watermill with some of other softwares and comapared it. If you want to read this 
+you can refer to [week3](https://github.com/bionode/gsoc18/blob/master/Journal/week_3.md) for `nextflow` and for `cwl` you 
+can find this in [week4](https://github.com/bionode/gsoc18/blob/master/Journal/week_4.md). If you want a more detailed guide 
+then you can read [this](https://jmazz.me/blog/NGS-Workflows). This blog will help you understanding the comparision between 
+all these.
