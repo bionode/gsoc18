@@ -1,5 +1,5 @@
 - [Summary](#summary)
-- [Intial Steps](#intial-steps)
+- [Initial Steps](#intial-steps)
 - [Getting started with Docker](#getting-started-with-docker)
 - [Getting started with Redux](#getting-started-with-redux)   
         - [Redux Saga](#redux-saga)
@@ -16,7 +16,7 @@ contribution. I try to explain most of the things for a beginner which has basic
 help the developers who want to get started with development of this project or want to start contribute to this project.
 
 
-## Intial Steps
+## Initial Steps
 
 The first step is to fork the `Bionode-Watermill` [repo](https://github.com/bionode/bionode-watermill), the extra information 
 about it's requirement and other things are explained in main repo page. The important information what is does and how you
