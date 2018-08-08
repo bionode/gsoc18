@@ -40,7 +40,9 @@ The code is divided according to the two parts
 * Load the inputs
 * Resolve the input so that they will resolve it 
 
-####   * Load-Inputs :- I  this part basically I'v etried to load the inputs into the store.
+####   * Load-Inputs :- 
+
+This part basically I've tried to load the inputs into the store.
 
 ```javascript
 const LOAD_INPUTS = 'LOAD_INPUTS'
@@ -120,5 +122,106 @@ store.dispatch(loadExternalInputs())
 
 ```
 
-* Resolve-Input
+#### * Resolve-Input :-
+
+Here, In this task I've tried to resolve the load-inputs which is coming from the above task. 
+
+```javascript
+
+const LOAD_INPUTS = 'LOAD_INPUTS'
+const RESOLVE_INPUTS = 'RESOLVE_INPUTS'
+const LOAD_FAIL = 'LOAD_FAIL'
+
+
+// reducers
+
+const defaultState = {}
+
+const reducer = (state = defaultState, action) => {   
+
+	switch(action.type) {
+		case 'LOAD_INPUTS':
+			return Object.assign({}, state, { desired: action.data })
+		case 'RESOLVE_INPUTS' :
+			return Object.assign({}, state, { desired: action.path })
+		case 'LOAD_FAIL' :
+			return Object.assign({}, state )
+		default :
+			return state
+	}
+}
+
+// Action 
+
+const loadExternalInputs = (data) => ({
+	type: 'LOAD_INPUTS',
+	payload: data
+})
+
+const resolveInput = (path) => ({
+	type: 'RESOLVE_INPUTS',
+	payload: path
+})
+
+const loadFail = (err) => {
+	type: 'LOAD_FAIL'
+	//payload: err,
+	//error : true
+}
+
+
+function readExternalInput(path) {
+	return new Promise((resolve, reject) => {
+		path = process.argv[2]
+		fs.readFile(path, 'utf8', (err, data) => {
+			if (err) {
+				reject(err)
+			} else {
+				try {
+				 const results = resolve(JSON.parse(data))
+				} catch(err) {
+					reject (err)
+				}
+			}
+		})
+	})
+}
+
+
+function* resolveExternalInput() {
+
+	const logEmitter = new EventEmitter2({ wildcard: true })
+
+	
+	try {
+// I've wrapped almost evrything in one try statement
+		const action = yield take(RESOLVE_INPUTS)
+		//const externalInput = yield call(readExternalInput, process.argv[2])
+
+	readExternalInput(process.argv[2])
+		.then((externalInput) => {
+			return Promise.all(Object.keys(externalInput).map(key => matchToFs(externalInput[key])))
+		})
+		.then((results) => {
+			console.log(results)
+		})
+
+		
+// maybe this is also not running 
+	return yield put(resolveInput(path))
+		
+	} catch (err) {
+		yield put(loadFail(err))
+	}
+}
+
+store.dispatch(resolveInput())
+
+```
+
+#### Results :-
+
+I've tested this code and it takes very difficult to debug and understand it so My mentor advised me to do this with the
+vanilla redux. Because the code is hard to understand and showing lot's of error and hard to understand for any new person
+. So basically I will try to refactor the code to vanilla redux.
 
