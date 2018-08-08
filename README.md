@@ -2,6 +2,7 @@
 
 - [Summary](#summary)
 - [Notebook week reports](#notebook-week-reports)
+- [Learning](#learning)
 - [Merged pull requests](#merged-pull-requests)
 
 
@@ -31,6 +32,18 @@ The gsoc progress report(weekely report). This report conaatins all the informat
 * [Week 10](https://github.com/bionode/gsoc18/blob/master/Journal/week_10.md)
 * [Week 11](https://github.com/bionode/gsoc18/blob/master/Journal/week_11.md)
 * [Week 12](https://github.com/bionode/gsoc18/blob/master/Journal/week_12.md)
+
+
+## Learning
+
+I made this guide because I've faced various challenges while comfortable with this project so if any person
+wants to work or contribute to this so basically a confusion always comes into mind how to start and understanding a
+big codebase is not easy at-least not for me. So, I've tried to explain all the things which is essential for this 
+project and from where anyone can start. So, basically it can be a developer guide to make comfortable the new developers
+. I am still updating the guide like when I found a new challenging thing so I try to explain the problem and desired
+solution in my guide.
+
+You can read this **learning guide** [here](https://github.com/bionode/gsoc18/blob/master/learning.md)
 
 
 ## Merged pull requests
