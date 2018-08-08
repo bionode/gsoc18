@@ -40,7 +40,7 @@ The code is divided according to the two parts
 * Load the inputs
 * Resolve the input so that they will resolve it 
 
-* Load-Inputs :- I  this part basically I'v etried to load the inputs into the store.
+####   * Load-Inputs :- I  this part basically I'v etried to load the inputs into the store.
 
 ```javascript
 const LOAD_INPUTS = 'LOAD_INPUTS'
