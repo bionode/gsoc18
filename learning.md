@@ -129,6 +129,9 @@ You can try a simple todo app with the help of redux. If you know react then it 
 redux tutorials are explain with react. So, you can learn more easily but if you don't know react then it is ok
 to try a example with plain HTML.
 
+If you still finds difficulty like I was feel the same so I searched a lot and find this. The simplest guide from which
+I've learned vanilla redux. Here's the [Link](https://decembersoft.com/posts/redux-hero-part-1-a-hero-is-born-a-fun-introduction-to-redux-js/)
+
 You can learn a little basic of it and it will help you in understanding the codebase. In `bionode-watermill` we have reducer functions which helps to do some tasks. You can find all these reducers [here](https://github.com/evoxtorm/bionode-watermill/tree/master/lib/reducers).
 
 
