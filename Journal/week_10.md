@@ -87,4 +87,86 @@ store.dispatch(loadInputs(process.argv[2]))
 ```
 
 
+####   * Resolve-Inputs :- 
+
+Basically in this part of task we will take inputs from the json and seprate every inputs key and it's values and give
+it's absolute path. So, that we can store the value in the store for using again.
+
+* Code :-
+
+```javascript
+
+const initialState = {
+  	desired: {},
+  	resolved: {}
+}
+
+
+// Actions Types
+const RESOLVE_INPUTS =  'RESOLVE_INPUTS'
+
+// Action creators
+const resolveInputs = (key, value) => ({
+	type: 'RESOLVE_INPUTS',
+	payload: { key, value}
+})
+
+
+// Reducers  
+const resolveInputReducer = (state = initialState, action) => {
+	switch (action.type) {
+		case 'RESOLVE_INPUTS':
+			const resolved = Object.assign({}, state.resolved, { [action.key]: action.value })
+			//console.log(action)
+			return Object.assign({}, state, { resolved })
+	}
+	return state
+}
+
+// This is for the resolving the input data and it will the resolved
+ // data like key and it's value and giving the absolute path
+ // for each key
+  
+const path = process.argv[2]
+
+ function readExternalInput(path) {
+	return new Promise((resolve, reject) => {
+		//path = process.argv[2]
+		fs.readFile(path, (err, data) => {
+			if (err) {
+				reject(err)
+			} else {
+				 return resolve(JSON.parse(data))
+			}
+		})
+	})
+}
+
+
+readExternalInput(process.argv[2])
+	.then((externalInput) => {
+		return Promise.all([externalInput, Promise.all(Object.keys(externalInput).map(key => matchToFs(externalInput[key])))]) 
+	})
+	.then(([externalInput, results]) => {
+		const final = {}
+		Object.keys(externalInput).forEach((key, i) => {
+			//console.log(i)
+			//console.log(results)
+			//console.log(key)
+			final[key] = results[i]
+			console.log(final)
+			store.dispatch({ type: 'RESOLVE_INPUTS', resolved: { [payload.key] : [payload.results] }})
+		})
+	})
+
+store.dispatch(resolveInputs(process.argv[2]))
+```
+
+
+#### Result
+
+On running the code I'm able to complete the first task and in second part of the task I'm able to resolve the path and
+give the absolute path but storing the key and values is not acheived so I will carry forward this task to next week.
+
+
 
