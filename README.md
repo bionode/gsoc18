@@ -4,6 +4,7 @@
 - [Notebook week reports](#notebook-week-reports)
 - [Learning](#learning)
 - [Merged pull requests](#merged-pull-requests)
+- [What was not done and why](#what-was-not-done-and-why)
 
 
 ## Summary
@@ -58,3 +59,18 @@ This PR conatains the work of 3 other PR so we have merged all the work into one
 
 * [Issue95](https://github.com/bionode/bionode-watermill/issues/95) Currently working on this issue basically I've completed
 almost 70% of it so I will try to complete it before the gsoc ends.
+
+
+
+## What was not done and why
+
+Unforunately due to my college exams I was not able to start on time so basically I'm not able to acheive some of the goals.
+I will not able to do in my gsoc time but I will try to do all these things after my gsoc because GSOC made me habbit to 
+contribution to Open source so I will love to work on these after gsoc.
+
+[Issue95](https://github.com/bionode/bionode-watermill/issues/95) I'm currently working but if I'm not able to acheive this 
+so I will continue to this work after my GSOC.
+
+
+
+
