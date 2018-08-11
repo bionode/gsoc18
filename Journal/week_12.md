@@ -15,4 +15,6 @@ and which have taken lot of time. So basically it can help new developers to get
 
 ## Progress
 
-
+This week is dedicated for documentating the journal an code parts so that everyone can understand what I've done during 
+my GSOC jorney. So, I left journal of last four weeks so I completed all these journals so that what've done in my 
+GSOC journey.
