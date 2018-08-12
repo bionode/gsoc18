@@ -5,6 +5,8 @@
 - [Learning](#learning)
 - [Merged pull requests](#merged-pull-requests)
 - [What was not done and why](#what-was-not-done-and-why)
+- [What needs to be done yet](#what-needs-to-be-done-yet)
+
 
 
 ## Summary
@@ -70,6 +72,13 @@ contribution to Open source so I will love to work on these after gsoc.
 
 [Issue95](https://github.com/bionode/bionode-watermill/issues/95) I'm currently working but if I'm not able to acheive this 
 so I will continue to this work after my GSOC.
+
+
+## What needs to be done yet
+
+* Improvements to the visualization tool
+
+*  Streaming Between Tasks
 
 
 
