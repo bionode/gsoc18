@@ -66,23 +66,6 @@ const resolveInputs = (key, value) => ({
 })
 
 
-// Reducers  
-
-// const reducer = (state = initialState, action) => {
-
-// 	switch(action.type) {
-// 		case 'Actions.LOAD_INPUTS':
-// 			return Object.assign({}, state, { desired: input })
-// 		case 'Actions.RESOLVE_INPUTS':
-// 			return Object.assign({}, state, { resolved: { [action.key]: action.value }})
-// 		default :
-// 			return state
-// 	}
-// }
-
-
-
-
 const loadInputReducer = (state = initialState, action) => {
 	switch (action.type) {
 		case 'LOAD_INPUTS':
@@ -159,13 +142,6 @@ readExternalInput(process.argv[2])
 	})
 
 
-
-
-
-// const reducer = combineReducers({
-// 	loadInputs: loadInputReducer,
-// 	resolveInputs: resolveInputReducer
-// })
 
 const rootreducer = combineReducers({ loadInputReducer ,resolveInputReducer  }) 
 
